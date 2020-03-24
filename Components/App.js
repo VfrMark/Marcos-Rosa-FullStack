@@ -1,22 +1,23 @@
-/*import React, { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
 import div from './Div';
 import primo from './Primo';
 
+//class principal
 class App extends Component {
   constructor() {
     super();
-    this.state = {
+    this.state = {    //state que guarda a variável enviada pelo usuário, a princípio vazio.
       value: ''
     }; 
   this.handleChange = this.handleChange.bind(this)
   this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleChange(event){
-    this.setState({value: event.target.value})
+    this.setState({value: event.target.value})   //função que altera a variável conforme o usuário insere numeros na box de mensagem
   }
 
-  handleSubmit(event) { 
+  handleSubmit(event) {        //função que chama os Componentes criados
     div(this.state.value)
     primo(this.state.value)
     event.preventDefault();
@@ -43,7 +44,6 @@ class App extends Component {
           class='botao'
           />
         </form>
-        <p1>{this.handleChange}</p1>
       </div>
     );
   }
